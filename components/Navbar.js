@@ -14,7 +14,7 @@ const Navbar = () => {
                 <Link href="/">Home</Link>
               </li>
               <li className="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5">
-                <Link href="/">Contact</Link>
+                <Link href="/contact">Contact</Link>
               </li>
               <li className="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5">
                 <Link href="/">Services</Link>
@@ -25,40 +25,12 @@ const Navbar = () => {
               <li className="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5">
                   <Link href="/login">Login</Link>
               </li>
+              <li >
+                  <Link href="/login" className="px-7 py-3 bg-green-500 text-white rounded inline-block font-semibold md:ml-8 mt-4 md:mt-0" >Book Appointment</Link>
+              </li>
             </ul>
-            <div className=" text-center text-base pr-5  inline-flex">
-              {" "}
-              <Link
-                href="/"
-                className="w-8 h-8 inline-block rounded-full pt-[6px] hover:text-blue-500"
-              >
-                <i className="fa fa-twitter"></i>
-              </Link>{" "}
-              <Link
-                href="/"
-                className="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"
-              >
-                <i className="fa fa-instagram"></i>
-              </Link>{" "}
-              <Link
-                href="/"
-                className="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"
-              >
-                <i className="fa fa-facebook"></i>
-              </Link>{" "}
-              <Link
-                href="/"
-                className="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"
-              >
-                <i className="fa fa-google"></i>
-              </Link>{" "}
-              <Link
-                href="/"
-                className="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"
-              >
-                <i className="fa fa-linkedin"></i>
-              </Link>{" "}
-            </div>
+            
+            
           </div>
         </nav>
       </div>
