@@ -21,13 +21,13 @@ const Form = () => {
   return (
     <>
        <div className="mt-5 md:mt-0 md:col-span-2" >
-      <form action="#" method="POST">
+      <div >
         <div className="shadow overflow-hidden sm:rounded-md">
           <div className="px-4 py-5 bg-white sm:p-6">
             <div className="grid grid-cols-6 gap-6">
             <div className="col-span-6 sm:col-span-3">
                 <label className="block text-sm font-medium text-gray-700">Select Affillate*</label>
-                <select value={affillate} onChange={(e)=>setAffillate(e.target.value)} id="country" name="country" autocomplete="country" className="mt-1 block w-full py-1 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-200">
+                <select value={affillate} onChange={(e)=>setAffillate(e.target.value)} id="country" name="country" autoComplete="country" className="mt-1 block w-full py-1 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-200">
                   <option>Itoby Healthcare Pvt. Ltd.</option>
                   <option>hello</option>
                   <option>hi</option>
@@ -36,7 +36,7 @@ const Form = () => {
 
               <div className="col-span-6 sm:col-span-3">
                 <label className="block text-sm font-medium text-gray-700">Select SPL*</label>
-                <select value={spl} onChange={(e)=>setSPL(e.target.value)} id="country" name="country" autocomplete="country" className="mt-1 block w-full py-1 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-200">
+                <select value={spl} onChange={(e)=>setSPL(e.target.value)} id="country" name="country" autoComplete="country" className="mt-1 block w-full py-1 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-200">
                   <option>Benekind Medics Global Pvt. Ltd.</option>
                   <option>hello</option>
                   <option>hi</option>
@@ -45,12 +45,12 @@ const Form = () => {
 
               <div className="col-span-6 sm:col-span-3">
                 <label className="block text-sm font-medium text-gray-700">Collection Date*</label>
-                <input value={date} onChange={(e)=>setDate(e.target.value)} type="date" name="first_name" id="first_name" autocomplete="given-name" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full py-1 px-3 shadow-sm sm:text-sm border-gray-700 rounded-md bg-gray-200 " />
+                <input value={date} onChange={(e)=>setDate(e.target.value)} type="date" name="first_name" id="first_name" autoComplete="given-name" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full py-1 px-3 shadow-sm sm:text-sm border-gray-700 rounded-md bg-gray-200 " />
               </div>
 
               <div className="col-span-6 sm:col-span-3">
                 <label className="block text-sm font-medium text-gray-700">Collection Slot*</label>
-                <select value={slot} onChange={(e)=>setSlot(e.target.value)} id="country" name="country" autocomplete="country" className="mt-1 block w-full py-1 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-200">
+                <select value={slot} onChange={(e)=>setSlot(e.target.value)} id="country" name="country" autoComplete="country" className="mt-1 block w-full py-1 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-200">
                   <option>6:00-6:30</option>
                   <option>6:30-7:00</option>
                   <option>7:00-7:30</option>
@@ -79,22 +79,22 @@ const Form = () => {
 
               <div className="col-span-6 sm:col-span-3">
                 <label className="block text-sm font-medium text-gray-700">Patient Name*</label>
-                <input value={name} onChange={(e)=>setName(e.target.value)} type="text" name="first_name" id="first_name" autocomplete="given-name" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full py-1 px-3 shadow-sm sm:text-sm border-gray-700 rounded-md bg-gray-200 " />
+                <input value={name} onChange={(e)=>setName(e.target.value)} type="text" name="first_name" id="first_name" autoComplete="given-name" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full py-1 px-3 shadow-sm sm:text-sm border-gray-700 rounded-md bg-gray-200 " />
               </div>
 
               <div className="col-span-6 sm:col-span-3">
                 <label className="block text-sm font-medium text-gray-700">Patient Email*</label>
-                <input value={email} onChange={(e)=>setEmail(e.target.value)} type="text" name="email_address" id="email_address" autocomplete="email" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full py-1 px-3 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
+                <input value={email} onChange={(e)=>setEmail(e.target.value)} type="text" name="email_address" id="email_address" autoComplete="email" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full py-1 px-3 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
               </div>
               
               <div className="col-span-6 sm:col-span-3">
                 <label className="block text-sm font-medium text-gray-700">Patient Age*</label>
-                <input value={age} onChange={(e)=>setAge(e.target.value)} type="age" name="last_name" id="last_name" autocomplete="family-name" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full py-1 px-3 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200"/>
+                <input value={age} onChange={(e)=>setAge(e.target.value)} type="age" name="last_name" id="last_name" autoComplete="family-name" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full py-1 px-3 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200"/>
               </div>
               
               <div className="col-span-6 sm:col-span-3">
                 <label className="block text-sm font-medium text-gray-700">Gender*</label>
-                <select value={gender} onChange={(e)=>setGender(e.target.value)} id="country" name="country" autocomplete="country" className="mt-1 block w-full py-1 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-200">
+                <select value={gender} onChange={(e)=>setGender(e.target.value)} id="country" name="country" autoComplete="country" className="mt-1 block w-full py-1 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-200">
                   <option>Male</option>
                   <option>Female</option>
                   <option>Other</option>
@@ -113,17 +113,17 @@ const Form = () => {
 
               <div className="col-span-6 sm:col-span-3">
                 <label className="block text-sm font-medium text-gray-700">Landmark</label>
-                <input value={landmark} onChange={(e)=>setLandmark(e.target.value)} type="text" name="first_name" id="first_name" autocomplete="given-name" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full py-1 px-3 shadow-sm sm:text-sm border-gray-700 rounded-md bg-gray-200 " />
+                <input value={landmark} onChange={(e)=>setLandmark(e.target.value)} type="text" name="first_name" id="first_name" autoComplete="given-name" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full py-1 px-3 shadow-sm sm:text-sm border-gray-700 rounded-md bg-gray-200 " />
               </div>
 
               <div className="col-span-6 sm:col-span-3">
                 <label className="block text-sm font-medium text-gray-700">Pincode*</label>
-                <input value={pincode} onChange={(e)=>setPincode(e.target.value)} type="text" name="first_name" id="first_name" autocomplete="given-name" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full py-1 px-3 shadow-sm sm:text-sm border-gray-700 rounded-md bg-gray-200 " />
+                <input value={pincode} onChange={(e)=>setPincode(e.target.value)} type="text" name="first_name" id="first_name" autoComplete="given-name" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full py-1 px-3 shadow-sm sm:text-sm border-gray-700 rounded-md bg-gray-200 " />
               </div>
 
               <div className="col-span-6 sm:col-span-3">
                 <label className="block text-sm font-medium text-gray-700">Zone*</label>
-                <select value={zone} onChange={(e)=>setZone(e.target.value)} id="country" name="country" autocomplete="country" className="mt-1 block w-full py-1 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-200">
+                <select value={zone} onChange={(e)=>setZone(e.target.value)} id="country" name="country" autoComplete="country" className="mt-1 block w-full py-1 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-200">
                   <option>Ajmer</option>
                   <option>Bharatpur</option>
                   <option>Bikaner</option>
@@ -136,7 +136,7 @@ const Form = () => {
 
               <div className="col-span-6 sm:col-span-3">
                 <label className="block text-sm font-medium text-gray-700">Patient Address*</label>
-                <input value={address} onChange={(e)=>setAddress(e.target.value)} type="text" name="first_name" id="first_name" autocomplete="given-name" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full py-1 px-3 shadow-sm sm:text-sm border-gray-700 rounded-md bg-gray-200 " />
+                <input value={address} onChange={(e)=>setAddress(e.target.value)} type="text" name="first_name" id="first_name" autoComplete="given-name" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full py-1 px-3 shadow-sm sm:text-sm border-gray-700 rounded-md bg-gray-200 " />
               </div>
 
             </div>
@@ -147,7 +147,7 @@ const Form = () => {
             </button>
           </div>
         </div>
-      </form>
+      </div>
     </div>
     </>
   )
