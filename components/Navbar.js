@@ -17,7 +17,7 @@ const Navbar = () => {
                 <Link href="/">Contact</Link>
               </li>
               <li className="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5">
-                <Link href="/">Services</Link>
+                <Link href="/form">Services</Link>
               </li>
               <li className="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5">
                 <Link href="/">About</Link>
