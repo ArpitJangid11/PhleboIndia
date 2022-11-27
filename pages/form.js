@@ -15,8 +15,18 @@ const Form = () => {
   const[pincode,setPincode] = useState("");
   const[zone,setZone] = useState("");
   const[address,setAddress] = useState("");
-  const Form1 = () =>{
+  const Form1 = async() =>{
         console.log(affillate,spl,date,slot,name,email,age,gender,vip,weak,landmark,pincode,zone,address)
+        const Data = await fetch('http://localhost:5500/api/book-appointment',{
+          method:'post',
+          body:JSON.stringify({affillate,spl,date,slot,name,email,age,gender,vip,weak,landmark,pincode,zone,address}),
+          headers:{
+            'Content-Type':'application/json'
+          }
+        });
+        const usedata = await Data.json();
+        console.log(usedata);
+       
   }
   return (
     <>

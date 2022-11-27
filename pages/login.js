@@ -1,58 +1,73 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from "react";
+import {MdCall, MdPendingActions} from 'react-icons/md'
 // import styles from '../styles/login.module.css'
 const Login = () => {
-const [email, setEmail] = useState ("");
-const [password, setPassword] = useState ("");
-const Login1 = () =>{
-		console.log(email,password)
-}
-return (
-    <>
-        <div className="flex justify-center">
-			<div className="h-[90%] w-full md:w-3/4 m-4">
-				<div className="text-xl cursor-pointer flex flex-col justify-center items-center mt-5 md:mt-0">
-					<h1 className="font-semibold text-3xl text-gray-700 m-2">Log In</h1>
-					<div className="flex">
-						<ion-icon name="logo-google"
-							className="py-2 rounded px-4 border-2 m-1 cursor-pointer border-violet-600 text-white bg-violet-600 hover:bg-white hover:text-violet-600 text-2xl">
-						</ion-icon>
-						<ion-icon name="logo-facebook"
-							className="py-2 rounded px-4 border-2 m-1 cursor-pointer border-blue-500 bg-blue-500 text-white hover:bg-white hover:text-blue-500 text-2xl">
-						</ion-icon>
-					</div>
-					<div className="text-gray-700 font-semibold">  or </div>
-				</div>
-				<div className="flex flex-col justify-center items-center mt-10 md:mt-4 space-y-6 md:space-y-8">
-					<div className="">
-						<input type="text" value={email} 
-					     onChange={(e)=>setEmail(e.target.value)}	placeholder="Email"
-							className=" bg-gray-100 rounded-lg px-5 py-2 focus:border border-violet-600 focus:outline-none text-black placeholder:text-gray-600 placeholder:opacity-50 font-semibold md:w-72 lg:w-[340px]"/>
-					</div>
-					<div className="">
-						<input type="password" value ={password } onChange={(e)=>setPassword(e.target.value)} placeholder="Password"
-							className=" bg-gray-100 rounded-lg px-5 py-2 focus:border border-violet-600 focus:outline-none text-black placeholder:text-gray-600 placeholder:opacity-50 font-semibold md:w-72 lg:w-[340px]"/>
-					</div>
-					<div className="flex space-x-2 -ml-28 md:-ml-40  lg:-ml-52">
-						<input className="" type="checkbox" id="checkbox" name="checkbox"/>
-						<h3 className="text-sm font-semibold text-gray-400 -mt-1 cursor-pointer">Remember Me</h3>
-					</div>
-				</div>
-				<div className="text-center mt-7">
-					<button
-						className="uppercase px-24 md:px-[118px] lg:px-[140px] py-2 rounded-md text-white bg-violet-500 hover:bg-violet-600  font-medium " onClick={Login1}>login</button>
-				</div>
-				<div className="text-center my-6 flex flex-col">
-					<a href="#" className="text-sm font-medium text-gray-400 hover:text-violet-500 m-1">Forgot
-						Password ?</a>
-					<a href="#" className="text-sm font-bold text-gray-400 hover:text-violet-500 m-1">
-						Not a User? Create New Account</a>
-				</div>
-			</div>
-		</div>
-                                        
-                                     
-	</>
-  )
-}
+  const [user, setUsers] = useState([]);
+  useEffect(() => {
+    fetchData();
+  }, []);
 
-export default Login
+  const fetchData = async () => {
+    let data = await fetch("http://localhost:5500/api/register", {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    data = await data.json();
+
+    setUsers(data);
+  };
+  console.warn(user);
+  return (
+    <>
+      
+      
+	  
+	  <section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">Users</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Banh mi cornhole echo park skateboard authentic crucifix neutra tilde lyft biodiesel artisan direct trade mumblecore 3 wolf moon twee</p>
+    </div>
+    <div class="lg:w-2/3 w-full mx-auto overflow-auto">
+      <table class="table-auto w-full text-left whitespace-no-wrap">
+        <thead>
+          <tr>
+            <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">S.no</th>
+            <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Name</th>
+            <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Email</th>
+            <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Status</th>
+            <th class="w-10 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tr rounded-br"></th>
+          </tr>
+        </thead>
+        <tbody>
+		{user.map((item,index)=>
+			<tr>
+            <td class="px-4 py-3">{index}</td>
+            <td class="px-4 py-3">{item.name}</td>
+            <td class="px-4 py-3">{item.email}</td>
+            <td class="px-4 py-3 text-lg text-gray-900">pending</td>
+            <td class="w-10 text-center">
+			<MdCall/>
+            </td>
+          </tr>
+
+		)}
+        </tbody>
+      </table>
+    </div>
+    <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
+      <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"> More
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+    </>
+  );
+};
+
+export default Login;
