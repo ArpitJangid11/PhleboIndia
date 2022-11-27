@@ -28,18 +28,16 @@ const Form = () => {
             <div className="col-span-6 sm:col-span-3">
                 <label className="block text-sm font-medium text-gray-700">Select Affillate*</label>
                 <select value={affillate} onChange={(e)=>setAffillate(e.target.value)} id="country" name="country" autoComplete="country" className="mt-1 block w-full py-1 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-200">
-                  <option>Itoby Healthcare Pvt. Ltd.</option>
-                  <option>hello</option>
-                  <option>hi</option>
+                  <option>Dr Pathcare</option>
+                  <option>Itoby HealthCare</option>
                 </select>
               </div>
 
               <div className="col-span-6 sm:col-span-3">
                 <label className="block text-sm font-medium text-gray-700">Select SPL*</label>
                 <select value={spl} onChange={(e)=>setSPL(e.target.value)} id="country" name="country" autoComplete="country" className="mt-1 block w-full py-1 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-200">
-                  <option>Benekind Medics Global Pvt. Ltd.</option>
-                  <option>hello</option>
-                  <option>hi</option>
+                  <option>Benikind Medics Global Pvt. Ltd.</option>
+                  <option>Augmentum Diagnostics</option>
                 </select>
               </div>
 
