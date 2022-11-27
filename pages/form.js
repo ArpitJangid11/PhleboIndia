@@ -48,33 +48,32 @@ const Form = () => {
                 <input value={date} onChange={(e)=>setDate(e.target.value)} type="date" name="first_name" id="first_name" autoComplete="given-name" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full py-2 px-3 shadow-sm sm:text-sm border-gray-700 rounded-md bg-gray-200 " />
               </div>
 
-              <div className="col-span-6 sm:col-span-3">
+              <div className="col-span-4 sm:col-span-2 ">
                 <label className="block text-sm font-medium text-gray-700">Collection Slot*</label>
-                <select value={slot} onChange={(e)=>setSlot(e.target.value)} id="country" name="country" autoComplete="country" className="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-200">
-                  <option>6:00-6:30</option>
-                  <option>6:30-7:00</option>
-                  <option>7:00-7:30</option>
-                  <option>7:30-8:00</option>
-                  <option>8:00-8:30</option>
-                  <option>8:30-9:00</option>
-                  <option>9:00-9:30</option>
-                  <option>9:30-10:00</option>
-                  <option>10:00-10:30</option>
-                  <option>10:30-11:00</option>
-                  <option>11:00-11:30</option>
-                  <option>11:30-12:00</option>
-                  <option>12:00-12:30</option>
-                  <option>12:00-1:00</option>
-                  <option>1:00-1:30</option>
-                  <option>1:30-2:00</option>
-                  <option>2:00-2:30</option>
-                  <option>2:00-3:00</option>
-                  <option>3:00-3:30</option>
-                  <option>3:30-4:00</option>
-                  <option>4:00-4:30</option>
-                  <option>4:30-5:00</option>
-                  <option>5:30-6:00</option>
+                <div className="col-span-4 sm:col-span-2 inline-flex grid-cols-4 gap-3 ">
+                <div className="col-span-4 sm:col-span-2 inline-flex grid-cols-4 gap-1">
+                <label className="block text-sm font-small text-gray-500">From</label>
+                <select value={slot} onChange={(e)=>setSlot(e.target.value)} id="country" name="country" autoComplete="country" className=" block w-3% py-1 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-200">
+                  <option>05</option>
                 </select>
+                <select value={slot} onChange={(e)=>setSlot(e.target.value)} id="country" name="country" autoComplete="country" className=" block w-4% py-1 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-200">
+                  <option>30</option>
+                </select>
+                <select value={slot} onChange={(e)=>setSlot(e.target.value)} id="country" name="country" autoComplete="country" className=" block w-4% py-1 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-200">
+                  <option>AM</option>
+                  <option>PM</option>
+                </select>
+                
+                </div>
+                
+                <div className="col-span-4 sm:col-span-2 inline-flex grid-cols-2 gap-1">
+                <label className="block text-sm font-small text-gray-500">To</label>
+                <select value={slot} onChange={(e)=>setSlot(e.target.value)} id="country" name="country" autoComplete="country" className=" block w-8% py-1 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-200">
+                  <option>5:00</option>
+                </select>
+                </div>
+                </div>
+                
               </div>
 
               <div className="col-span-6 sm:col-span-2">
