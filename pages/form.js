@@ -15,8 +15,18 @@ const Form = () => {
   const[pincode,setPincode] = useState("");
   const[zone,setZone] = useState("");
   const[address,setAddress] = useState("");
-  const Form1 = () =>{
+  const Form1 = async() =>{
         console.log(affillate,spl,date,slot,name,email,age,gender,vip,weak,landmark,pincode,zone,address)
+        const Data = await fetch('http://localhost:5500/api/book-appointment',{
+          method:'post',
+          body:JSON.stringify({affillate,spl,date,slot,name,email,age,gender,vip,weak,landmark,pincode,zone,address}),
+          headers:{
+            'Content-Type':'application/json'
+          }
+        });
+        const usedata = await Data.json();
+        console.log(usedata);
+       
   }
   return (
     <>
@@ -28,6 +38,7 @@ const Form = () => {
             <div className="col-span-6 sm:col-span-3">
                 <label className="block text-sm font-medium text-gray-700">Select Affillate*</label>
                 <select value={affillate} onChange={(e)=>setAffillate(e.target.value)} id="country" name="country" autoComplete="country" className="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-200">
+                  <option className="text-gray-500">Select Affillate</option>
                   <option>Dr Pathcare</option>
                   <option>Itoby HealthCare</option>
                 </select>
@@ -36,6 +47,7 @@ const Form = () => {
               <div className="col-span-6 sm:col-span-3">
                 <label className="block text-sm font-medium text-gray-700">Select SPL*</label>
                 <select value={spl} onChange={(e)=>setSPL(e.target.value)} id="country" name="country" autoComplete="country" className="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-200">
+                  <option className="text-gray-500">Select SPL</option>
                   <option>Benikind Medics Global Pvt. Ltd.</option>
                   <option>Augmentum Diagnostics</option>
                 </select>
@@ -92,6 +104,7 @@ const Form = () => {
               <div className="col-span-6 sm:col-span-1 gap-10">
                 <label className="block text-sm font-medium text-gray-700">Gender*</label>
                 <select value={gender} onChange={(e)=>setGender(e.target.value)} id="country" name="country" autoComplete="country" className="mt-1 block w-50% py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-200">
+                <option className="text-gray-500">Select Gender</option>
                   <option>Male</option>
                   <option>Female</option>
                   <option>Other</option>
