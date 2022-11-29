@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { MdCall, MdPendingActions } from "react-icons/md";
-// import styles from '../styles/login.module.css'
-const Login = () => {
+const AdminLogin = () => {
   const [user, setUsers] = useState([]);
   useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = async () => {
-    let data = await fetch("http://localhost:5500/api/register", {
+    let data = await fetch("http://localhost:5500/api/fetch-appointment", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -43,22 +42,42 @@ const Login = () => {
                   <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
                     Name
                   </th>
-                  <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
-                    Email
-                  </th>
+                 
+                 
                   <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
                     Status
                   </th>
-                  <th class="w-10 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tr rounded-br"></th>
+                  <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
+                    Zone
+                  </th>
+                  <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
+                    Address
+                  </th>
+                  <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
+                    SPL
+                  </th>
+
+                  <th class="w-10 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tr rounded-br"> Date</th>
+                  <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
+                   call
+                  </th>
+                  <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
+                 
+                  </th>
                 </tr>
+               
               </thead>
               <tbody>
                 {user.map((item, index) => (
                   <tr>
                     <td class="px-4 py-3">{index}</td>
-                    <td class="px-4 py-3">{item.name}</td>
-                    <td class="px-4 py-3">{item.email}</td>
-                    <td class="px-4 py-3 text-lg text-gray-900">pending</td>
+                    <td class="px-4 py-3">{item.patientName}</td>
+                    <td class="px-4 py-3">{item.patientStatus}</td>
+                    <td class="px-4 py-3">{item.zone}</td>
+                    <td class="px-4 py-3">{item.address}</td>
+                    <td class="px-4 py-3">{item.spl}</td>
+
+                    <td class="px-4 py-3 text-lg text-gray-900">{item.collectionDate}</td>
                     <td class="w-10 text-center">
                       <MdCall />
                     </td>
@@ -74,9 +93,9 @@ const Login = () => {
               <svg
                 fill="none"
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 class="w-4 h-4 ml-2"
                 viewBox="0 0 24 24"
               >
@@ -90,4 +109,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default AdminLogin;
