@@ -32,7 +32,7 @@ const Form = () => {
                   <option>Dr Pathcare</option>
                   <option>Itoby HealthCare</option>
                 </select>
-              </div>
+            </div>
 
               <div className="col-span-6 sm:col-span-3">
                 <label className="block text-sm font-medium text-gray-700">Select SPL*</label>
