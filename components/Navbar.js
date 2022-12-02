@@ -21,6 +21,9 @@ const Navbar = () => {
                 <Link href="/about">About</Link>
               </li>
               <li className="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5">
+                <Link href="/addbooking">Add Booking</Link>
+              </li>
+              <li className="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5">
                   <Link href="/adminLogin">Admin Login</Link>
               </li>
               <li >
