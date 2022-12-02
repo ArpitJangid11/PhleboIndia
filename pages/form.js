@@ -54,10 +54,27 @@ const Form = () => {
                 <div className="col-span-4 sm:col-span-2 inline-flex grid-cols-4 gap-1">
                 <label className="block text-sm font-small text-gray-500">From</label>
                 <select value={slot} onChange={(e)=>setSlot(e.target.value)} id="country" name="country" autoComplete="country" className=" block w-3% py-1 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-200">
+                  <option>01</option>
+                  <option>02</option>
+                  <option>03</option>
+                  <option>04</option>
                   <option>05</option>
+                  <option>06</option>
+                  <option>07</option>
+                  <option>08</option>
+                  <option>09</option>
+                  <option>10</option>
+                  <option>11</option>
+                  <option>12</option>
+                 
                 </select>
                 <select value={slot} onChange={(e)=>setSlot(e.target.value)} id="country" name="country" autoComplete="country" className=" block w-4% py-1 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-200">
+                  <option>00</option>
+                  <option>10</option>
+                  <option>20</option>
                   <option>30</option>
+                  <option>40</option>
+                  <option>50</option>
                 </select>
                 <select value={slot} onChange={(e)=>setSlot(e.target.value)} id="country" name="country" autoComplete="country" className=" block w-4% py-1 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-200">
                   <option>AM</option>
