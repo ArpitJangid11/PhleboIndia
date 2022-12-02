@@ -118,7 +118,6 @@ const Form = () => {
                 </select>
               </div>
               
-              {/* <div className="inline-grid grid-cols-3"> */}
                 <div className="col-span-4 sm:col-span-2 inline-flex grid-cols-2 gap-2">
                   <input value={vip} onChange={(e)=>setVip(e.target.value)} type="checkbox" id="default-checkbox"  className="w-4 h-4 text-blue-600 bg-gray-200 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
                   <label className="block text-sm w-40% font-medium text-gray-700">Mark this as VIP</label>
@@ -133,7 +132,6 @@ const Form = () => {
                   <input value={weak} onChange={(e)=>setWeak(e.target.value)} type="checkbox" id="last_name" className="w-4 h-4 text-blue-600 bg-gray-200 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
                   <label className="block text-sm font-medium text-gray-700">Mark this as PPMC </label>
                 </div>
-              {/* </div> */}
 
               <div className="col-span-6 sm:col-span-3">
                 <label className="block text-sm font-medium text-gray-700">Landmark</label>
