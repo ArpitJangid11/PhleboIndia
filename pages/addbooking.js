@@ -1,9 +1,9 @@
 import React from "react";
-
+import {MdDelete} from "react-icons/md";
 const addbooking = () => {
   return (
     <div className="m-5  ">
-        <div className="block text-xl font-bold text-gray-900 mb-5 m-50">Add Booking</div>
+        <div className="block text-xl font-bold text-gray-900 mb-5">Add Booking</div>
       <div className="grid grid-cols-6 gap-6 ">
         <div className="col-span-5 sm:col-span-3">
           <label className="block text-sm font-medium text-gray-700">
@@ -155,7 +155,7 @@ const addbooking = () => {
           </div>
         </div>
 
-        <div className="col-span-5 sm:col-span-5">
+        <div className="col-span-5 sm:col-span-5 overflow-x-auto relative">
           <table className="w-full text-sm text-left text-gray-900 dark:text-gray-400">
             <thead className="text-xs text-gray-700 bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
@@ -184,9 +184,10 @@ const addbooking = () => {
               <tr className="bg-white border-b dark:bg-gray-500 dark:border-gray-700">
                 <th
                   scope="row"
-                  className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                  className="py-4 px-6 text-xl font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
-                  Delete
+                  <MdDelete/>
+            
                 </th>
                 <td className="py-4 px-6">1</td>
                 <td className="py-4 px-6">platelet count</td>
@@ -211,7 +212,7 @@ const addbooking = () => {
           </table>
         </div>
 
-        <div className="col-span-5 sm:col-span5-5 ">
+        <div className="col-span-5 sm:col-span-5 ">
           <label className="block text-sm font-medium text-gray-700">
             Sample
           </label>
@@ -220,7 +221,7 @@ const addbooking = () => {
               id="country"
               name="country"
               autoComplete="country"
-              className="mt-1 block w-90% py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-200"
+              className="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-gray-200"
             >
               <option className="text-gray-500">Select Sample</option>
             </select>
@@ -235,7 +236,7 @@ const addbooking = () => {
           </div>
         </div>
 
-        <div className="col-span-5 sm:col-span-6">
+        <div className="col-span-5 sm:col-span-6 overflow-x-auto relative">
           <table className="w-full text-sm text-left text-gray-900 dark:text-gray-400">
             <thead className="text-xs text-gray-700 bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
@@ -255,9 +256,9 @@ const addbooking = () => {
               <tr className="bg-white border-b dark:bg-gray-500 dark:border-gray-700">
                 <th
                   scope="row"
-                  className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                  className="py-4 px-6 font-medium text-xl text-gray-900 whitespace-nowrap dark:text-white"
                 >
-                  Delete
+                  <MdDelete/>
                 </th>
                 <td className="py-4 px-6">1</td>
                 <td className="py-4 px-6">EDTA</td>
@@ -267,26 +268,26 @@ const addbooking = () => {
           </table>
         </div>
 
-        <div className="inline-grid grid-cols-2 gap-50">
-          <div className="px-4 py-3 bg-gray-50 text-right sm:px-6 ml-50">
+      </div>
+        <div className="inline-grid grid-cols-2 w-full ">
+          <div className="px-4 py-3 bg-gray-50 sm:px-6 ">
             <button
               type="submit"
-              className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-black rounded-md text-indigo-600 bg-white hover:text-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+              className="inline-flex justify-center py-2 px-4 border-transparent shadow-sm text-lg font-semibold rounded-md text-indigo-600 bg-white hover:text-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
             >
               Previous
             </button>
           </div>
 
-          <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
+          <div className="ml-1 px-4 py-3 text-right bg-gray-50 sm:px-6">
             <button
               type="submit"
-              className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-black rounded-md text-indigo-600 bg-white hover:text-green-700 focus:outline-none  "
+              className="inline-flex justify-center py-2 px-4  border-transparent shadow-sm text-lg font-semibold rounded-md text-indigo-600 bg-white hover:text-green-700 focus:outline-none  "
             >
               Save
             </button>
           </div>
         </div>
-      </div>
     </div>
   );
 };
